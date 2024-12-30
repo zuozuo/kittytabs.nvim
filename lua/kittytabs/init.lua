@@ -4,6 +4,7 @@ local M = {}
 local config = {
     command_name = "kittytabs",
     exit_on_selected = true,
+    -- AI! This is the path to the kittytabs.sh script.
     script_path = vim.fn.fnamemodify(vim.fn.resolve(vim.fn.expand('<sfile>:p')), ':h:h:h') .. '/scripts/kittytabs.sh'
 }
 
@@ -21,6 +22,9 @@ end
 function M.kittyStartupTabs()
     local script_path = M.get_script_path()
     local exit_opt = config.exit_on_selected and "--exit_all=1" or ""
+    vim.notify("Starting kitty tabs with " .. exit_opt)
+    vim.notify("Script path: " .. script_path)
+    vim.notify("Command name: " .. config.command_name)
     local cmd = string.format(
         "FloatermNew %s bash %s",
         exit_opt,
