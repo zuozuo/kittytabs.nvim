@@ -4,7 +4,7 @@ local M = {}
 local config = {
     command_name = "kittytabs",
     exit_on_selected = true,
-    -- AI! This is the path to the kittytabs.sh script.
+    -- AI! the below code for find script path is wrong, change it
     script_path = vim.fn.fnamemodify(vim.fn.resolve(vim.fn.expand('<sfile>:p')), ':h:h:h') .. '/scripts/kittytabs.sh'
 }
 
