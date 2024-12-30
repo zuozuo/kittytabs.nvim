@@ -10,7 +10,9 @@ function! floaterm#wrapper#kittytabs#(cmd, jobopts, config) abort
   let s:kittytabs_tmpfile = tempname()
   let cmd = a:cmd
   let s:exit_all = get(a:config, 'exit_all', 1)
-  " AI! print cmd,jobopts and config here for debug AI!
+  echom 'kittytabs cmd: ' . string(cmd)
+  echom 'kittytabs jobopts: ' . string(a:jobopts)
+  echom 'kittytabs config: ' . string(a:config)
 
   if cmd !~ '--preview'
     if executable('bat')
