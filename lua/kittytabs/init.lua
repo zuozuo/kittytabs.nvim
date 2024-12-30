@@ -5,7 +5,7 @@ local config = {
     command_name = "kittytabs",
     exit_on_selected = true,
     -- AI! the below code for find script path is wrong, change it
-    script_path = vim.fn.fnamemodify(vim.fn.resolve(vim.fn.expand('<sfile>:p')), ':h:h:h') .. '/scripts/kittytabs.sh'
+    script_path = vim.fn.fnamemodify(vim.fn.resolve(vim.fn.expand('<sfile>:p')), ':h:h') .. '/scripts/kittytabs.sh'
 }
 
 -- 设置函数
